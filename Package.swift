@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "Postal",
-            targets: ["Postal"]),
+            targets: ["Postal", "Postal.iOS", "Postal-macOS"]),
     ],
     dependencies: [
         // no dependencies
@@ -17,9 +17,9 @@ let package = Package(
     targets: [
         .target(
             name: "Postal",
-            dependencies: []),
+            dependencies: ["Postal", "Postal.iOS", "Postal-macOS"]),
         .testTarget(
             name: "PostalTests",
-            dependencies: ["Postal"]),
+            dependencies: ["Postal", "Postal.iOS", "Postal-macOS"]),
     ]
 )
